@@ -36,7 +36,6 @@ module FiniteBot
 
               output = shorten(url)
               output = output + " -- " + cur_title unless cur_title.nil?
-
               output
               }.compact
             end

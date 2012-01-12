@@ -20,11 +20,11 @@ module FiniteBot
     end
 
     def ctcp_userinfo(m)
-      m.ctcp_reply "Finite Bot #{VERSION}"
+      m.ctcp_reply "Finite Bot #{APP_CONFIG[:version]}"
     end
 
     def ctcp_version(m)
-      m.ctcp_reply "Finite Bot #{VERSION}"
+      m.ctcp_reply "Finite Bot #{APP_CONFIG[:version]}"
     end
   end
 end

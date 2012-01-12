@@ -1,3 +1,9 @@
+#
+#  finite_bot.rb
+#
+#  Created by hMz on 2012-01-12.
+#
+
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), '../lib')
 
 require 'open-uri'

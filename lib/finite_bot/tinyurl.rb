@@ -19,7 +19,7 @@ module FiniteBot
     end
 
     def shorten(url)
-      url = open("http://tinyurl.com/api-create.php?url=#{URI.escape(url)}").read
+      url = open("#{APP_CONFIG[:tinyurl][:server_url]}#{URI.escape(url)}").read
       url == "Error" ? nil : url
     rescue OpenURI::HTTPError
       nil

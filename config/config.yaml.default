@@ -17,3 +17,4 @@
   :tinyurl:
     :display_titles: true
     :minimum_characters: 30
+    :server_url: "http://tinyurl.com/api-create.php?url="

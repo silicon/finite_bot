@@ -9,13 +9,12 @@ module FiniteBot
     listen_to :message
 
     def title(url)
-      begin
-        html = open(url).read
-      rescue
-        return nil
+      html = open(url).read rescue OpenURI::HTTPError
+
+      unless html.nil?
+        title = %r{<title>(.*)</title>}m.match(html)[1]
+        title.squeeze(" ").gsub("\r"," ").gsub("\n"," ").squeeze(" ").strip
       end
-      title = %r{<title>(.*)</title>}m.match(html)[1]
-      title.squeeze(" ").gsub("\r"," ").gsub("\n"," ").squeeze(" ").strip
     end
 
     def shorten(url)

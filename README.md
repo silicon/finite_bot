@@ -11,8 +11,8 @@
 ## Usage
 
 - Execute update_forex_data.rb script
-> cd config
-> ../script/update_forex_data.rb
+  cd config
+  ../script/update_forex_data.rb
 
 - Startup bot
-> screen -ln script/server
+  screen -ln script/server

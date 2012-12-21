@@ -15,7 +15,7 @@ module FiniteBot
         return nil
       end
       title = %r{<title>(.*)</title>}m.match(html)[1]
-      title.squeeze(" ").gsub("\r"," ").gsub("\n"," ").squeeze(" ").strip
+      HTMLEntities.new.decode(title.squeeze(" ").gsub("\r"," ").gsub("\n"," ").squeeze(" ").strip)
     end
 
     def shorten(url)
